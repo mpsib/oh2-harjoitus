@@ -1,0 +1,9 @@
+CREATE TABLE Balsalevy (
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   tiheys DOUBLE NOT NULL,
+   korkeus DOUBLE NOT NULL,
+   leveys DOUBLE NOT NULL,
+   paino DOUBLE NOT NULL,
+   pituus DOUBLE NOT NULL,
+   grain TEXT NOT NULL
+);
