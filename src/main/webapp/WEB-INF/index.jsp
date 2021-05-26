@@ -4,50 +4,62 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>Web application test page</title>
-	<link rel="stylesheet" href="/styles/demo.css">
+<meta charset="utf-8">
+<title>Web application test page</title>
+<link rel="stylesheet" href="/styles/demo.css">
 </head>
 
 <body>
 
-	<h1>🎉 Congratulations! 🎉</h1>
+	<h1>Puun tiheyslaskuri</h1>
 
-	<p>If you are viewing this page on a browser, several technical
-		components appear to work properly:</p>
-	<ol>
-		<li>First of all, your browser was able to connect to your Tomcat
-			server</li>
-		<li>Second, the server was able to map your request to the <code>IndexServlet</code>
-			class and invoke its <code>doGet</code> method
-		</li>
-		<li>Third, the <code>doGet</code> method added additional
-			information to the request before forwarding it to this JSP file <code>/WEB-INF/index.jsp</code>
-			.
-		</li>
-	</ol>
-	<p>
-		The added information was set in an attribute
-		<code>aikaNyt</code>
-		and its value is:
-	</p>
-	<p class="time-now">${ aikaNyt }</p>
-	<p>Try refreshing the page and you will see the dynamic value
-		changing!</p>
-	<div style="background-color: #FFB6C1;">
-		<p class="external-css">
-			If you see this paragraph with a light green background color, your
-			browser was also able to retrieve and external CSS file. The
-			background color is defined in a file <a href="/styles/demo.css">/styles/demo.css</a>,
-			which was served to you by Tomcat as a static file. If the background
-			is red, there was an issue loading the file :(
-		</p>
-	</div>
-	<p>Text may be saved, loaded and transmitted with various different
-		encodings. If you see five star emojis here: ⭐️ ⭐️ ⭐️ ⭐️ ⭐️, it means
-		that the content was properly served and interpreted with UTF-8
-		encoding.</p>
-	<hr />
+	<table>
+		<form method="post">
+			<td></td>
+			<td>Arvo</td>
+			<tr>
+				<td>Paksuus (mm)</td>
+				<td><input name="paksuus" type="text" required
+					autocomplete="off" value="${a}"/></td>
+			</tr>
+			<tr>
+				<td>Pituus (mm)</td>
+				<td><input name="pituus" type="text" required
+					autocomplete="off" value="${b}" /></td>
+			</tr>
+			<tr>
+				<td>Leveys (mm)</td>
+				<td><input name="leveys" type="text" required
+					autocomplete="off" value="${c}" /></td>
+			</tr>
+			<tr>
+				<td>Paino (g)</td>
+				<td><input name="paino" type="text" required 
+					autocomplete="off" value="${d}"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Laske" /></td>
+		</form>
+		</tr>
+		<tr>
+			<td>Tulos (kg/m3)</td>
+			<td>${tulosKg}</td>
+		</tr>
+		<tr>
+			<td>Tulos (lb/ft3)</td>
+			<td>${tulosLb}</td>
+		</tr>
+
+	</table>
+
+	<br>
+	<form>
+		<input type="submit" value="Tietokantaohjelma" action="/pin" />
+	</form>
+
+
+
 
 </body>
 </html>
