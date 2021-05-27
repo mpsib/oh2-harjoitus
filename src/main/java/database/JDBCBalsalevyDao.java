@@ -88,7 +88,7 @@ public class JDBCBalsalevyDao implements BalsalevyDao {
 			query.setDouble(4, paino);
 			query.setDouble(5, pituus);
 			query.setString(6, grain);
-			query.executeQuery();
+			query.executeUpdate();
 			query.close();
 			connection.close();
 		} catch (Exception e) {
