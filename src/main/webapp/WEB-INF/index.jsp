@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; utf-8"
 	pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 
@@ -54,8 +55,8 @@
 	</table>
 
 	<br>
-	<form>
-		<input type="submit" value="Tietokantaohjelma" action="/pin" />
+	<form method="get" action="/sovellus" >
+		<input type="submit" value="Pro-versioon"/>
 	</form>
 
 
